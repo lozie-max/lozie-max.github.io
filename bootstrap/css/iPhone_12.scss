@@ -1,0 +1,264 @@
+$logo_fill: transparent;
+$logo_stroke-width: 1px;
+$logo_stroke_color: black;
+$logo_stroke-linecap: round;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#phone_show {
+  width: 100%;
+  height: 100vh;
+  #iphone12_box {
+    width: 100%;
+    height: 100vh;
+    background: url("https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-blue-select-2020?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1604343704000") no-repeat;
+    background-size: 940px 1112px;
+    background-position: center -150px;
+    position: absolute;
+    top: 150px;
+    left: 120px;
+    transform: scale(0) translateX(-50%) translateY(-50%);
+    animation: 0.5s phonescale 2.4s ease-in forwards;
+  }
+
+  #svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    animation: 0.5s logoscale 2s ease-out forwards;
+
+    #apple_body {
+      fill: $logo_fill;
+      stroke-width: $logo_stroke-width;
+      stroke: $logo_stroke_color;
+      stroke-dasharray: 3000;
+      stroke-dashoffset: 3000;
+      stroke-linecap: $logo_stroke-linecap;
+      transition: stroke_fill 2s;
+      animation: 1s stroke_body forwards ease-in-out, 1.5s stroke_fill .9s forwards;
+    }
+
+    #apple_head {
+      fill: $logo_fill;
+      stroke-width: $logo_stroke-width;
+      stroke: $logo_stroke_color;
+      stroke-dasharray: 720;
+      stroke-dashoffset: 720;
+      stroke-linecap: $logo_stroke-linecap;
+      animation: 1s stroke_head forwards ease-in-out, 1.5s stroke_fill .9s forwards;
+    }
+
+    @keyframes stroke_head {
+      0% {
+        stroke-dashoffset: 600px;
+        fill: transparent;
+      }
+      70% {
+        stroke-dashoffset: 100px;
+        fill: transparent;
+      }
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @keyframes stroke_body {
+      0% {
+        stroke-dashoffset: 2500;
+        fill: transparent;
+      }
+      70% {
+        stroke-dashoffset: 500;
+        fill: transparent;
+      }
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @keyframes stroke_fill {
+      0% {
+        fill: #201D24;
+        stroke: #201D24;
+      }
+      25% {
+        fill: #FAF6F3;
+        stroke: #FAF6F3;
+      }
+      50% {
+        fill: #E13737;
+        stroke: #E13737;
+      }
+      75% {
+        fill: #DDF4D8;
+        stroke: #DDF4D8;
+      }
+      100% {
+        fill: #053357;
+        stroke: #053357;
+      }
+    }
+  }
+
+  @keyframes logoscale {
+    from {
+      transform: scale(1) translateX(-50%) translateY(-50%);
+    }
+    to {
+      transform: scale(0) translateX(-50%) translateY(-50%);
+    }
+  }
+
+  @keyframes phonescale {
+    from {
+      transform: scale(0) translateX(-50%) translateY(-50%);
+    }
+    to {
+      transform: scale(1) translateX(-50%) translateY(-50%);
+      top: 50%;
+      left: 50%;
+    }
+  }
+}
+
+//:root{
+//  --percentage: 0%;
+//}
+//#main {
+//  width: 100%;
+//  background: #000;
+//  .sticky_box{
+//    height: 200vh;
+//    .sticky {
+//      position: sticky;
+//      height: 100vh;
+//      top: 0;
+//      display: flex;
+//      justify-content: center;
+//      align-items: center;
+//      h1 {
+//        font-family: Helvetica;
+//        //padding: 300px;
+//        font-size: 48px;
+//        letter-spacing: -0.3px;
+//        background-image: linear-gradient(75deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 33.33%, rgba(255, 255, 255, 0) 66.67%, rgba(255, 255, 255, 0) 100%);
+//        background-size: 300% 100%;
+//        background-position-x: calc(100% - var(--percentage));
+//        background-clip: text;
+//        -webkit-background-clip: text;
+//        color: transparent;
+//      }
+//    }
+//  }
+//
+//  .hardware{
+//    width: 100%;
+//    height: 300vh;
+//    background: #ffbaba;
+//  }
+//}
+
+:root {
+  --device-width: 770px;
+  --device-height: 1336px;
+  --ui-width: 640px;
+  font-size: 15px;
+  --phone-top: 280vh;
+}
+
+#main {
+  background-color: #000;
+  margin: 0;
+  .sticky_box {
+    width: 100%;
+    height: 200vh;
+    .sticky {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    h1 {
+      font-family: Helvetica;
+      margin: 0;
+      paddin: 0 g;
+      font-size: 48px;
+      letter-spacing: -0.3px;
+      background-image: linear-gradient(75deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 33.33%, rgba(255, 255, 255, 0) 66.67%, rgba(255, 255, 255, 0) 100%);
+      background-size: 300% 100%;
+      background-position-x: calc(100% - var(--percentage));
+      opacity: var(--opacity);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  }
+  .phone {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+
+    .hardware {
+      width: var(--device-width);
+      height: 100%;
+      background: url("https://assets.codepen.io/2002878/iphone12-5g_on_phone.jpg") no-repeat;
+      background-size: var(--device-width) var(--device-height);
+
+      position: absolute;
+      top: var(--phone-top);
+      mask-image: url("https://assets.codepen.io/2002878/iphone12-5g_on_phone_mask.png");
+      -webkit-mask-image: url("https://assets.codepen.io/2002878/iphone12-5g_on_phone_mask.png");
+      mask-size: var(--device-width) var(--device-height);
+      -webkit-mask-size: var(--device-width) var(--device-height);
+    }
+
+    .ui {
+      position: absolute;
+      top: var(--phone-top);
+    }
+
+    .ui .top-ui {
+      display: block;
+      width: var(--ui-width);
+      height: auto;
+      margin: 70px auto 0;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #222;
+    }
+
+    .ui ul {
+      list-style: noen;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      --progress: 0;
+    }
+
+    .ui ul li img {
+      display: block;
+      width: var(--ui-width);
+      height: auto;
+      margin: 10px auto;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #222;
+      transform: scale(calc(1.8 - (0.8 * var(--progress)))) translateY(calc(-60px * (1 - var(--progress))));
+      opacity: var(--progress);
+    }
+  }
+
+}
+
+#footer {
+  height: 100vh;
+}
+
+
+

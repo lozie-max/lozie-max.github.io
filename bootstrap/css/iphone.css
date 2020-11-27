@@ -1,0 +1,163 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+ul li {
+  list-style: none; }
+
+body {
+  background-color: #000000; }
+
+#nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 120px;
+  background-color: #141416;
+  box-shadow: #141416 0 20px 150px; }
+  #nav .nav_center {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex; }
+  #nav .nav_logo {
+    width: 20%; }
+    #nav .nav_logo a.logo:after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 120px;
+      background: url("https://www.apple.com.cn/ac/globalnav/6/zh_CN/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_apple_image__cxwwnrj0urau_large.svg") no-repeat;
+      background-size: cover;
+      transform: scale(0.5); }
+  #nav .nav_product {
+    width: 80%;
+    display: flex;
+    justify-content: space-around; }
+    #nav .nav_product .phone_box {
+      width: 80px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      flex-direction: column; }
+      #nav .nav_product .phone_box a {
+        font-size: 12px;
+        font-family: Helvetica;
+        color: #fff;
+        text-decoration: none; }
+      #nav .nav_product .phone_box a.iphone_new:after {
+        content: '新款';
+        color: #f56300;
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7); }
+    #nav .nav_product .nav_i12_pro a.iphone_12_pro:after {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 50px;
+      background: url("https://www.apple.com.cn/v/iphone/home/ap/images/chapternav/iphone_12_pro_dark__c1xodf0hb1w2_large.svg") no-repeat;
+      background-size: cover;
+      background-position: 0 -2px;
+      margin-top: 20px; }
+    #nav .nav_product .nav_i12 a.iphone_12:after {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 50px;
+      background: url("https://www.apple.com.cn/v/iphone/home/ap/images/chapternav/iphone_12_dark__d7asodlag7e6_large.svg") no-repeat;
+      background-size: cover;
+      background-position: 0 -5px;
+      margin-top: 20px; }
+    #nav .nav_product .nav_ise a.iphone_se:after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 50px;
+      background: url("https://www.apple.com.cn/v/iphone/home/ap/images/chapternav/iphone_se_dark__b1b8q1iya5o2_large.svg") no-repeat;
+      background-size: cover;
+      background-position: 0 -10px;
+      margin-top: 20px; }
+    #nav .nav_product .nav_i11 a.iphone_11:after {
+      content: '';
+      display: block;
+      width: 22px;
+      height: 50px;
+      background: url("https://www.apple.com.cn/v/iphone/home/ap/images/chapternav/iphone_11_dark__di5n0jory1me_large.svg") no-repeat;
+      background-size: cover;
+      background-position: 0 -5px;
+      margin-top: 20px; }
+    #nav .nav_product .nav_airpods a.airpods:after {
+      content: '';
+      display: block;
+      width: 25px;
+      height: 50px;
+      background: url("https://www.apple.com.cn/v/iphone/home/ap/images/chapternav/iphone_airpods_dark__7rlhc1y4jc2m_large.svg") no-repeat;
+      background-size: cover;
+      background-position: 0 -5px;
+      margin-top: 20px; }
+    #nav .nav_product .nav_ios14 a.ios14:after {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 50px;
+      background: url("https://www.apple.com.cn/v/iphone/home/ap/images/chapternav/iphone_ios_dark__bx23cu2kt8mu_large.svg") no-repeat;
+      background-size: cover;
+      background-position: 0 -5px;
+      margin-top: 20px; }
+
+#main .main_box_12_Pro, #main .main_box_12 {
+  padding-top: 150px; }
+  #main .main_box_12_Pro p, #main .main_box_12_Pro h2, #main .main_box_12 p, #main .main_box_12 h2 {
+    color: #fff;
+    text-align: center; }
+  #main .main_box_12_Pro p, #main .main_box_12 p {
+    font-family: Helvetica;
+    font-size: 30px;
+    font-weight: bold; }
+  #main .main_box_12_Pro h2, #main .main_box_12 h2 {
+    margin-top: 5px;
+    font-size: 50px;
+    font-weight: normal;
+    letter-spacing: 5px;
+    padding-left: 60px; }
+  #main .main_box_12_Pro li, #main .main_box_12 li {
+    width: 125px;
+    margin: 20px auto; }
+  #main .main_box_12_Pro a, #main .main_box_12 a {
+    color: #2997ff;
+    font-size: 20px;
+    text-decoration: none; }
+  #main .main_box_12_Pro a:hover, #main .main_box_12 a:hover {
+    text-decoration: underline; }
+  #main .main_box_12_Pro .main_phone12pro_box, #main .main_box_12 .main_phone12pro_box {
+    margin-top: 100px;
+    width: 100%;
+    height: 520px;
+    overflow: hidden; }
+    #main .main_box_12_Pro .main_phone12pro_box .phone, #main .main_box_12 .main_phone12pro_box .phone {
+      float: right;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      left: 20%;
+      background: url("https://www.apple.com.cn/v/iphone/home/ap/images/overview/hero/iphone_12_pro__f7wokw1n4lm6_large.jpg") no-repeat;
+      background-size: cover; }
+#main .main_box_12 {
+  background-color: #F2F2F2;
+  width: 100%;
+  height: 1000px; }
+  #main .main_box_12 p, #main .main_box_12 h2 {
+    color: #000; }
+  #main .main_box_12 .main_phone12_box {
+    width: 100%;
+    height: 650px;
+    margin: 0 auto; }
+    #main .main_box_12 .main_phone12_box .phone {
+      margin: 50px auto;
+      width: 700px;
+      height: 650px;
+      background: url("https://www.apple.com.cn/iphone/home/images/overview/hero/iphone_12__d51ddqcc7oqe_large.jpg") no-repeat;
+      background-size: cover; }
+
+/*# sourceMappingURL=iphone.css.map */

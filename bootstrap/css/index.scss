@@ -1,0 +1,129 @@
+$align: center;
+$span_sie: 150px;
+$object_sie: 200px;
+$main_color:#ffbaba;
+$scon_color:#5bc0de;
+$scon_border_color:#46b8da;
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-stacked {
+  width: 7%;
+  margin: 0 auto;
+  border-right: 2px solid silver;
+  position: fixed;
+  top: 5%;
+  padding-right: 1.33333333%;
+  z-index: 999;
+  li > a {
+    font-size: 0.1vw;
+    //font-size: 1%;
+    color: $scon_color;
+  }
+
+}
+
+#select{
+  width: 300px;
+  height: 30px;
+  margin: 3% auto;
+  display: flex;
+  .btn-info{
+    width: 100%;
+    background: $main_color;
+    border-color: $main_color;
+    outline: none;
+    height: 100%;
+    transition: all 2s;
+    color: $scon_color;
+  }
+  .select_input{
+    width: 0;
+    height: 100%;
+    outline: none;
+    text-indent: 5%;
+    border: 1px solid $main_color;
+    color: $scon_color;
+    transition: all 2s;
+    position: relative;
+    right: 3px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+}
+#select:hover .btn-info{
+  width: 50px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+#select:hover .select_input{
+  width: 250px;
+  right: 0;
+}
+
+#menu{
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  button{
+    outline: none;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    transition: all 2s;
+    span{
+      transition: all 2s;
+    }
+  }
+  button:hover{
+    background-color: $scon_color;
+    border-color: $scon_border_color;
+  }
+  button:hover span{
+    color: $main_color;
+  }
+}
+
+#bg {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  display: flex;
+  justify-content: $align;
+  align-items: $align;
+  transform: translateX(-50%);
+  padding-bottom: 5%;
+  border-bottom: 5px ridge $main_color;
+  span {
+    width: $span_sie;
+    height: $span_sie;
+    position: absolute;
+    border-radius: 50%;
+    animation: my 12s infinite linear;
+    transform-origin: 50px -150px 800px;
+    display: none;
+    //overflow-y: hidden;
+
+    object {
+      width: $object_sie;
+      height: $object_sie;
+      //overflow-y: hidden;
+    }
+  }
+}
+@keyframes my {
+  to {
+    transform: rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+
+
+

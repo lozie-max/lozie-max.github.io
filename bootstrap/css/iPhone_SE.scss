@@ -1,0 +1,167 @@
+$bg_color: #131313;
+$phone_width: 440px;
+$phone_height: 900px;
+
+:root {
+  --copy_block_opacity: 0;
+  --h3_opacity: 0;
+
+  font-size: 48px;
+
+  --iphone-black-bg: #131313;
+  --iphone-black-text: #f2f2f2;
+
+  --iphone-white-bg: #fff;
+  --iphone-white-text: #8b8b99;
+  --iphone-white-text-highlight: #1d1d1f;
+
+  --iphone-red-bg: #960b19;
+  --iphone-red-text: #e57571;
+  --iphone-red-text-highlight: #f5f5f7;
+
+  --iphone-width: 460px;
+  --iphone-offscreen: -720px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#start {
+  width: 100%;
+  height: 300vh;
+  background: $bg_color;
+  .sticky {
+    width: 100%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    .hardware {
+      position: absolute;
+      left: 50%;
+      //top: -100px;
+      transform: translateX(-50%);
+      width: $phone_width;
+      height: 100%;
+      background: url("https://www.apple.com.cn/105/media/us/iphone-se/2020/90024c0f-285a-4bf5-af04-2c38de97b06e/anim/hero-flow/large/flow/flow_startframe.jpg") no-repeat;
+      background-size: $phone_width $phone_height;
+      z-index: -999;
+      opacity: calc(100% - var(--hardware_opacity));
+    }
+    .sticky_text {
+      width: 500px;
+      padding-top: 400px;
+      margin: 0 auto;
+      .copy_block {
+        width: 130px;
+        height: 30px;
+        margin: 0 auto;
+        position: relative;
+        top: var(--copy_block_top);
+        background: url(https://www.apple.com.cn/v/iphone-se/c/images/overview/iphone_se_logo__c81srz3rei6a_large.png) no-repeat;
+        opacity: var(--copy_block_opacity);
+      }
+      h1 {
+        position: relative;
+        color: #fff;
+        font-size: 48px;
+        text-align: center;
+        font-family: 宋体;
+        margin: 5px auto;
+        opacity: var(--copy_block_opacity);
+        top: var(--copy_block_top);
+      }
+      h3 {
+        position: relative;
+        white-space: nowrap;
+        left: -50px;
+        font-size: 30px;
+        color: #fff;
+        opacity: var(--h3_opacity);
+        top: var(--h3_top);
+      }
+    }
+  }
+}
+
+#main {
+  width: 100%;
+  height: 3000px;
+  background-color: $bg_color;
+
+  .sticky-container {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    .iphone {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      h3 {
+        font-size: 1rem;
+        margin: 0 0 60px 0;
+        width: var(--iphone-width);
+      }
+      img {
+        display: block;
+        width: var(--iphone-width);
+        margin-bottom: var(--iphone-offscreen);
+      }
+    }
+    .iphone.black {
+      background-color: var(--iphone-black-bg);
+      z-index: 10;
+      h3 {
+        color: var(--iphone-black-text);
+      }
+    }
+    .iphone.white {
+      background-color: var(--iphone-white-bg);
+      z-index: 20;
+      clip-path: inset(100% 0px 0px 0px);
+      h3 {
+        color: var(--iphone-white-text);
+        span {
+          color: var(--iphone-white-text-highlight);
+        }
+      }
+    }
+    .iphone.red {
+      background-color: var(--iphone-red-bg);
+      z-index: 30;
+      clip-path: inset(100% 0px 0px 0px);
+      h3 {
+        color: var(--iphone-red-text);
+        span {
+          color: var(--iphone-red-text-highlight);
+        }
+      }
+    }
+  }
+
+  .sticky-container.no-sticky {
+    position: relative !important;
+    overflow: visible !important;
+    .iphone {
+      position: relative !important;
+    }
+    .iphone.red {
+      padding-bottom: calc(var(--iphone-offscreen) * -1) !important;
+    }
+  }
+}
+
+
+
+
+
